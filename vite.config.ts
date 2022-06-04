@@ -9,6 +9,7 @@ export default defineConfig({
     postcss: {
       plugins: [postcssPxToViewport({
         viewportWidth: 1920,
+        fontViewportUnit: 'vw',
         exclude: [/node_modules/, /\/src\/assets\//, /index.html/],
       })]
     }

@@ -1,17 +1,16 @@
-
-<template>
-<div class="xxx">
-
-</div>
-</template>
 <script setup lang="ts">
+import Header from './components/Header.vue'
+
 </script>
+<template>
+  <div class="container">
+    <Header></Header>
+  </div>
+
+</template>
+
 <style lang="scss" scoped>
-
-.xxx{
-  width: 367px;
-  height:315px;
-  border: 1px solid red;
+.container {
+ 
 }
-
 </style>
