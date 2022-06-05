@@ -2,7 +2,7 @@
 
     <div class="header">
       <img src="../assets/linx.png" alt="" class="logo">
-      <div class="xxx">{{ '设备环境检测平台' }}</div>
+      <div class="title">{{ '设备环境检测平台' }}</div>
     </div>
 
 </template>
@@ -18,9 +18,8 @@
         width: 100%;
       }
   
-      .xxx {
+      .title {
         color: white;
-        border: 1px solid red;
         position: absolute;
         top: 0;
         transform: translateY(50%);
