@@ -1,62 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import Header from './components/Header.vue'
-const option = ref({
-  title: {
-    text: "Traffic Sources",
-    left: "center"
-  },
-  tooltip: {
-    trigger: "item",
-    formatter: "{a} <br/>{b} : {c} ({d}%)"
-  },
-  legend: {
-    orient: "vertical",
-    left: "left",
-    data: ["Direct", "Email", "Ad Networks", "Video Ads", "Search Engines"]
-  },
-  series: [
-    {
-      name: "Traffic Sources",
-      type: "pie",
-      radius: "55%",
-      center: ["50%", "60%"],
-      data: [
-        { value: 335, name: "Direct" },
-        { value: 310, name: "Email" },
-        { value: 234, name: "Ad Networks" },
-        { value: 135, name: "Video Ads" },
-        { value: 1548, name: "Search Engines" }
-      ],
-
-      emphasis: {
-        itemStyle: {
-          shadowBlur: 10,
-          shadowOffsetX: 0,
-          shadowColor: "rgba(0, 0, 0, 0.5)"
-        }
-      }
-    }
-  ]
-});
+import Main from './components/Main.vue'
+import Footer from './components/Footer.vue'
 
 </script>
 <template>
   <div class="container">
     <Header></Header>
-
     <div class="wrapper">
-      <div class="main boxes">
-        <div class="box">
-        </div>
-        <div class="box"></div>
-        <div class="box"></div>
-      </div>
-      <div class="footer boxes">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-      </div>
+      <Main></Main>
+    <Footer></Footer>
     </div>
 
   </div>
@@ -65,38 +18,9 @@ const option = ref({
 
 <style lang="scss" scoped>
 .container {
-
   .wrapper {
     display: flex;
     flex-direction: column;
-  }
-
-  .main {
-    display: flex;
-    height: 450px;
-    margin: 30px;
-
-
-    .box {
-      flex: 1;
-      border: 1px solid red;
-      margin: 0 30px;
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  .footer {
-    display: flex;
-    height: 340px;
-    margin: 30px;
-
-    .box {
-      flex: 1;
-      border: 1px solid rgb(8, 248, 0);
-      margin: 0 30px;
-
-    }
   }
 }
 </style>
