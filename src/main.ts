@@ -15,6 +15,7 @@ import {
   TooltipComponent,
   TitleComponent,
   LegendComponent,
+  VisualMapComponent,
 } from 'echarts/components'
 import { OhVueIcon, addIcons } from "oh-vue-icons";
 import { HiSolidClipboardList, FaCrown, RiMoneyCnyCircleFill } from "oh-vue-icons/icons"; 
@@ -38,7 +39,8 @@ use([
   GridComponent,
   TooltipComponent,
   TitleComponent,
-  LegendComponent
+  LegendComponent,
+  VisualMapComponent,
 ]);
 
 
