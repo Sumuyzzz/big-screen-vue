@@ -3,6 +3,8 @@ import App from './App.vue'
 import './normalize.scss'
 import ECharts from 'vue-echarts'
 import { use } from "echarts/core";
+import ElementPlus from 'element-plus';
+import 'element-plus/dist/index.css';
 import {
   CanvasRenderer
 } from 'echarts/renderers'
@@ -18,15 +20,12 @@ import {
   VisualMapComponent,
 } from 'echarts/components'
 import { OhVueIcon, addIcons } from "oh-vue-icons";
-import { HiSolidClipboardList, FaCrown, RiMoneyCnyCircleFill } from "oh-vue-icons/icons"; 
-
-
-/* add font awesome icon component */
+import { HiSolidClipboardList, FaCrown, RiMoneyCnyCircleFill } from "oh-vue-icons/icons";
 
 
 
 
-addIcons(HiSolidClipboardList, FaCrown, RiMoneyCnyCircleFill);
+
 
 
 
@@ -48,14 +47,12 @@ use([
 
 
 
+addIcons(HiSolidClipboardList, FaCrown, RiMoneyCnyCircleFill);
 
 
-const app = createApp(App)
-
-
-
-
-app.component('v-chart', ECharts)
+const app = createApp(App);
+app.component('v-chart', ECharts);
 app.component("v-icon", OhVueIcon);
-app.mount('#app')
-  
+app.use(ElementPlus);
+app.mount('#app');
+
