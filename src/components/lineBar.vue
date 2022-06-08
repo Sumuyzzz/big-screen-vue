@@ -5,6 +5,26 @@
 <script setup >
 
 import VChart from "vue-echarts";
+
+
+
+const data = {
+  id: 'multipleBarsLines',
+  title: '2018年前半年检测统计',
+  legendBar: ['正面占比', '中立占比', '负面占比'],
+  symbol: '', //数值是否带百分号        --默认为空 ''
+  legendLine: ['同期对比'],
+  xAxis: ['一月', '二月', '三月', '四月', '五月', '六月'],
+  yAxis: [
+    [8, 10, 10, 11, 4, 13]
+  ],
+  lines: [
+    [10, 10, 9, 11, 7, 4]
+  ],
+  barColor: ['#3FA7DC', '#7091C4', '#5170A2'], //柱子颜色 必填参数
+  lineColor: ['#D9523F'], // 折线颜色
+
+};
 const options = {
   tooltip: {
     trigger: 'axis',
