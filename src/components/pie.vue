@@ -5,43 +5,57 @@
 <script setup lang="ts">
 import VChart from "vue-echarts";
 
-const  options = {
+const options = {
   title: {
-    text: '本月状态统计',
-    left: 'center',
-    color:'#fff'
+    text: '本月设备状态统计',
+    top: 35,
+    left: 20,
+    textStyle: {
+      fontSize: 18,
+      color: '#fff'
+    }
   },
   tooltip: {
-    trigger: 'item'
+    trigger: 'item',
+    formatter: "{a} <br/>{b}: {c} ({d}%)",
+
   },
   legend: {
-    orient: 'vertical',
-    left: 'left'
-  },
-  series: [
-    {
-      name: 'Access From',
-      type: 'pie',
-      radius: '50%',
-      data: [
-        { value: 89.29, name: '正常' },
-        { value:10.71, name: '故障' },
-      ],
-      emphasis: {
-        itemStyle: {
-          shadowBlur: 10,
-          shadowOffsetX: 0,
-          shadowColor: 'rgba(0, 0, 0, 0.5)'
-        }
-      }
+    right: 20,
+    top: 35,
+    data: ['故障', '正常'],
+    textStyle: {
+      color: '#fff'
     }
-  ]
-};
+  },
+  series: [{
+    name: '设备状态',
+    type: 'pie',
+    radius: ['0', '60%'],
+    center: ['50%', '60%'],
+    color: ['#e72325', '#98e002', '#2ca3fd'],
+    label: {
+      normal: {
+        formatter: '{b}\n{d}%'
+      },
+
+    },
+    data: [{
+      value: 6,
+      name: '故障'
+    },
+    {
+      value: 50,
+      name: '正常',
+      selected: true
+    }
+    ]
+  }]
+}
 
 
 
 </script>
 
 <style lang="scss" scoped>
-
 </style>
