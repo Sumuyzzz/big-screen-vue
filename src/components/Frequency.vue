@@ -1,9 +1,11 @@
 <template>
   <div class="box">
-
-
     <div class="demo-progress">
-      <div class="title">{{ '设备使用频率' }}</div>
+      <div class="header">
+        <div class="title">{{ '设备使用频率' }}</div>
+
+      </div>
+
       <el-progress class="progress" :text-inside="true" :stroke-width="16" :percentage="70" stroke-linecap="square" />
       <el-progress class="progress" :text-inside="true" :stroke-width="16" :percentage="100" status="success" />
       <el-progress class="progress" :text-inside="true" :stroke-width="16" :percentage="80" status="warning" />
@@ -19,7 +21,7 @@
         <img src="../assets/switch.png" alt="" class="switch">
         <div class="right">
           <div class="number"> {{ "15" }}</div>
-          <div class="string">{{ "次数" }}</div>
+          <div class="string">{{ "次" }}</div>
 
         </div>
       </div>
@@ -64,12 +66,17 @@ const format = (percentage) => (percentage === 100 ? 'Full' : `${percentage}%`)
 
 
 
+
 .box {
   color: white;
   border: 1px solid red;
   flex: 1;
   display: flex;
     font-size:1px;
+
+    .header{
+      height:120px;
+    }
   .demo-progress {
     display: flex;
     flex-direction: column;
@@ -92,19 +99,25 @@ const format = (percentage) => (percentage === 100 ? 'Full' : `${percentage}%`)
       display: flex;
       align-items:center;
       border-bottom: 1px dashed #f0ff00;
-      .left{
-
-      }
+      height: 120px;
+      justify-content: space-around;
       .switch {
         width: 10%;
       }
+      .left{
+        font-size:16px;
+      }
       .right{
         display: flex;
+        align-items: end;
         .number{
           color:#f0f000;
+          font-size:40px;
         }
         .string{
           color:#0072ff;
+          font-size: 20px;
+          
         }
       }
     }
@@ -112,7 +125,6 @@ const format = (percentage) => (percentage === 100 ? 'Full' : `${percentage}%`)
     .main {
       .map {
         width: 100%;
-
       }
     }
 
@@ -124,10 +136,7 @@ const format = (percentage) => (percentage === 100 ? 'Full' : `${percentage}%`)
         width: 50%;
         display: flex;
         flex-direction: column;
-
         font-size: 1px;
-
-
 
         .png {
           border: 1px dashed #f0ff00;

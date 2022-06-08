@@ -10,9 +10,11 @@ declare module '@vue/runtime-core' {
     Footer: typeof import('./src/components/Footer.vue')['default']
     Frequency: typeof import('./src/components/Frequency.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
+    LineBar: typeof import('./src/components/lineBar.vue')['default']
     Main: typeof import('./src/components/Main.vue')['default']
     Map: typeof import('./src/components/map/map.vue')['default']
     Order: typeof import('./src/components/Order.vue')['default']
+    Pie: typeof import('./src/components/pie.vue')['default']
   }
 }
 
