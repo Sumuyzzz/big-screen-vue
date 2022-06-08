@@ -15,6 +15,7 @@ declare module '@vue/runtime-core' {
     Map: typeof import('./src/components/map/map.vue')['default']
     Order: typeof import('./src/components/Order.vue')['default']
     Pie: typeof import('./src/components/pie.vue')['default']
+    Progress: typeof import('./src/components/progress.vue')['default']
   }
 }
 

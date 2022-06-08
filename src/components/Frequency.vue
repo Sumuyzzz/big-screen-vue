@@ -1,15 +1,6 @@
 <template>
   <div class="box">
-    <div class="demo-progress">
-      <div class="header">
-        <div class="title">{{ '设备使用频率' }}</div>
-      </div>
-      <el-progress class="progress" :text-inside="true" :stroke-width="16" :percentage="70" stroke-linecap="square" />
-      <el-progress class="progress" :text-inside="true" :stroke-width="16" :percentage="100" status="success" />
-      <el-progress class="progress" :text-inside="true" :stroke-width="16" :percentage="80" status="warning" />
-      <el-progress class="progress" :text-inside="true" :stroke-width="16" :percentage="65" status="warning" />
-      <el-progress class="progress" :text-inside="true" :stroke-width="16" :percentage="50" status="exception" />
-    </div>
+    <Progress></Progress>
 
     <div class="switches">
       <div class="header">
@@ -71,17 +62,7 @@ const format = (percentage) => (percentage === 100 ? 'Full' : `${percentage}%`)
     .header{
       height:120px;
     }
-  .demo-progress {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
 
-    .progress {
-      flex: 1;
-      width: 80%;
-      height: 30px;
-    }
-  }
 
   .switches {
     height: 100%;
