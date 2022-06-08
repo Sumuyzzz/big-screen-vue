@@ -33,13 +33,11 @@
 <style scoped lang="scss">
 .members {
   width: 330px;
-  border: 1px solid yellow;
 
   .box1 {
     width: 294px;
     height: 124px;
     margin: 16px;
-    border: 1px solid rgb(38, 0, 255);
     display: flex;
     align-items: center;
     justify-content: center;

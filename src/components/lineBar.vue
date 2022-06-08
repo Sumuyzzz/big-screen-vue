@@ -11,48 +11,37 @@ const options = {
     axisPointer: {
       type: 'cross',
       crossStyle: {
-        color: '#999'
+        color: '#fff'
       }
     }
   },
   legend: {
-    data: ['正话占比', 'Precipitation', 'Temperature'],
+    data: ['正画占比', '同期对比'],
     color: '#fff'
   },
   xAxis: [
     {
       type: 'category',
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      data: ['一月', '二月', '三月', '四月', '五月', '六月'],
       axisPointer: {
         type: 'shadow'
-      }
+      },
+      color: '#fff'
     }
   ],
   yAxis: [
     {
       type: 'value',
-      name: 'Precipitation',
-      min: 0,
-      max: 250,
-      interval: 50,
-      axisLabel: {
-        formatter: '{value} ml'
-      }
+      name: 'xxx',
     },
     {
       type: 'value',
       name: 'Temperature',
-      min: 0,
-      max: 25,
-      interval: 5,
-      axisLabel: {
-        formatter: '{value} °C'
-      }
     }
   ],
   series: [
     {
-      name: 'Evaporation',
+      name: '正画占比',
       type: 'bar',
       tooltip: {
         valueFormatter: function (value) {
@@ -64,19 +53,7 @@ const options = {
       ]
     },
     {
-      name: 'Precipitation',
-      type: 'bar',
-      tooltip: {
-        valueFormatter: function (value) {
-          return value + ' ml';
-        }
-      },
-      data: [
-        2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3
-      ]
-    },
-    {
-      name: 'Temperature',
+      name: '同期对比',
       type: 'line',
       yAxisIndex: 1,
       tooltip: {
@@ -93,5 +70,4 @@ const options = {
 </script>
 
 <style lang="scss" scoped>
-
 </style>

@@ -7,9 +7,9 @@ import VChart from "vue-echarts";
 
 const  options = {
   title: {
-    text: 'Referer of a Website',
-    subtext: 'Fake Data',
-    left: 'center'
+    text: '本月状态统计',
+    left: 'center',
+    color:'#fff'
   },
   tooltip: {
     trigger: 'item'
@@ -24,11 +24,8 @@ const  options = {
       type: 'pie',
       radius: '50%',
       data: [
-        { value: 1048, name: 'Search Engine' },
-        { value: 735, name: 'Direct' },
-        { value: 580, name: 'Email' },
-        { value: 484, name: 'Union Ads' },
-        { value: 300, name: 'Video Ads' }
+        { value: 89.29, name: '正常' },
+        { value:10.71, name: '故障' },
       ],
       emphasis: {
         itemStyle: {

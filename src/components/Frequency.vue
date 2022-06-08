@@ -3,9 +3,7 @@
     <div class="demo-progress">
       <div class="header">
         <div class="title">{{ '设备使用频率' }}</div>
-
       </div>
-
       <el-progress class="progress" :text-inside="true" :stroke-width="16" :percentage="70" stroke-linecap="square" />
       <el-progress class="progress" :text-inside="true" :stroke-width="16" :percentage="100" status="success" />
       <el-progress class="progress" :text-inside="true" :stroke-width="16" :percentage="80" status="warning" />
@@ -22,7 +20,6 @@
         <div class="right">
           <div class="number"> {{ "15" }}</div>
           <div class="string">{{ "次" }}</div>
-
         </div>
       </div>
       <div class="main">
@@ -65,11 +62,8 @@ const format = (percentage) => (percentage === 100 ? 'Full' : `${percentage}%`)
 <style lang="scss" scoped>
 
 
-
-
 .box {
   color: white;
-  border: 1px solid red;
   flex: 1;
   display: flex;
     font-size:1px;

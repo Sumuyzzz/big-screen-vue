@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import App from './view/App.vue'
 import './normalize.scss'
 import ECharts from 'vue-echarts'
 import { use } from "echarts/core";

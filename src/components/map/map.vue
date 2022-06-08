@@ -30,18 +30,15 @@ const map = ref(options)
 <style scoped lang="scss">
 .maps {
   flex: 1;
-  border: 1px solid red;
   margin: 0 30px;
   display: flex;
   flex-direction: column;
 
   .header {
-    border: 1px solid rgb(216, 240, 0);
     flex: 1;
     display: flex;
 
     .little-box {
-      border: 1px solid rgb(38, 255, 0);
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -49,7 +46,6 @@ const map = ref(options)
       justify-content: center;
 
       .key {
-
         color: #1a84ae
       }
 
@@ -61,7 +57,6 @@ const map = ref(options)
   }
 
   .map {
-    border: 1px solid rgb(8, 0, 255);
     flex: 2;
   }
 }

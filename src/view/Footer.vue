@@ -51,7 +51,6 @@
 </script>
 
 <style scoped lang="scss">
-
 .footer {
   display: flex;
   height: 340px;
@@ -59,19 +58,24 @@
 
   .box {
     flex: 1;
-    border: 1px solid rgb(8, 248, 0);
     margin: 0 30px;
-      display: flex;
-        align-items: center;
-        justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     .table {
       color: #fff;
       font-size: 1px;
       display: flex;
       align-items: center;
-      justify-content: center;    
+      justify-content: center;
 
-     
+      table {
+        border-collapse: collapse;
+        letter-spacing: 1px;
+      }
+
+
       th {
         background: #053a98;
         padding: 10px 20px;
