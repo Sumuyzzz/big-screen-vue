@@ -1,6 +1,6 @@
 <template>
   <div :class="color" class="box1">
-    <v-icon :name="names" color="#fff" class="icon" />
+    <v-icon :name="names" color="#fff" class="icon" animation="pulse" />
     <div class="message">
       <span>{{ text }}</span>
       <h2>{{ value }}</h2>
