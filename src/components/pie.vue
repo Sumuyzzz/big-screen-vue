@@ -1,5 +1,7 @@
 <template>
-  <v-chart :option="options" autoresize />
+
+    <v-chart :option="options" autoresize />
+
 </template>
 
 <script setup lang="ts">
@@ -33,21 +35,29 @@ const options = {
     type: 'pie',
     radius: ['0', '60%'],
     center: ['50%', '60%'],
-    color: ['#e72325', '#98e002', '#2ca3fd'],
+    color: ['#e72325', '#98e002'],
     label: {
       normal: {
         formatter: '{b}\n{d}%'
       },
-
+      textStyle: {
+        color: '#fff'
+      },
     },
     data: [{
       value: 6,
-      name: '故障'
+      name: '故障',
+      label: {
+        color:'#e72325'
+      }
     },
     {
       value: 50,
       name: '正常',
-      selected: true
+      selected: true,
+      label: {
+        color:'#98e002'
+      }
     }
     ]
   }]
@@ -58,4 +68,7 @@ const options = {
 </script>
 
 <style lang="scss" scoped>
+
+
+
 </style>

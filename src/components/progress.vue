@@ -131,6 +131,7 @@ const options = {
       display: flex;
       flex-direction: column;
       flex: 1;
-
+      border: 1px solid red;
+      height: 100%;
     }
 </style>
