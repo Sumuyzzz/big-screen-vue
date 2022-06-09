@@ -5,21 +5,18 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    Box: typeof import('./src/components/box.vue')['default']
     Charts: typeof import('./src/components/charts.vue')['default']
-    ElProgress: typeof import('element-plus/es')['ElProgress']
-    Footer: typeof import('./src/components/Footer.vue')['default']
     Frequency: typeof import('./src/components/Frequency/Frequency.vue')['default']
-    Header: typeof import('./src/components/Header.vue')['default']
     LineBar: typeof import('./src/components/lineBar.vue')['default']
-    Main: typeof import('./src/components/Main.vue')['default']
     Map: typeof import('./src/components/map/map.vue')['default']
     MapTitle: typeof import('./src/components/map/mapTitle.vue')['default']
     Order: typeof import('./src/components/Order.vue')['default']
     Physicalunits: typeof import('./src/components/Frequency/Physicalunits.vue')['default']
     Pie: typeof import('./src/components/pie.vue')['default']
-    Progress: typeof import('./src/components/progress.vue')['default']
+    Progress: typeof import('./src/components/Frequency/progress.vue')['default']
+    Switch: typeof import('./src/components/Frequency/Switch.vue')['default']
     Table: typeof import('./src/components/table.vue')['default']
+    Title: typeof import('./src/components/map/title.vue')['default']
     Unit: typeof import('./src/components/Frequency/unit.vue')['default']
   }
 }

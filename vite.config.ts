@@ -18,7 +18,7 @@ export default defineConfig({
   }),
 
   ],
-  base:'big-screen-vue',
+  base:'/big-screen-vue/',
   optimizeDeps: {
     exclude: ["oh-vue-icons/icons"]
   },

@@ -1,16 +1,14 @@
 import { createApp } from 'vue'
-import App from './view/App.vue'
-import './normalize.scss'
-import ECharts from 'vue-echarts'
+import App from './view/App.vue';
+import './normalize.scss';
+import ECharts from 'vue-echarts';
 import { use } from "echarts/core";
-import ElementPlus from 'element-plus';
-import 'element-plus/dist/index.css';
 import {
   CanvasRenderer
 } from 'echarts/renderers'
 import {
   BarChart,
-  PieChart
+  PieChart,
 } from 'echarts/charts'
 import {
   GridComponent,
@@ -53,6 +51,5 @@ addIcons(HiSolidClipboardList, FaCrown, RiMoneyCnyCircleFill);
 const app = createApp(App);
 app.component('v-chart', ECharts);
 app.component("v-icon", OhVueIcon);
-app.use(ElementPlus);
 app.mount('#app');
 

@@ -1,18 +1,14 @@
 <template>
-
-    <v-chart :option="options" autoresize />
-
-
+  <v-chart :option="options" autoresize />
 </template>
-
-<script setup >
+<script  setup >
 
 import VChart from "vue-echarts";
 var data = {
   id: 'multipleBarsLines',
   title: '2018年前半年检测统计',
   legendBar: ['正面占比', '中立占比', '负面占比'],
-  symbol: '', 
+  symbol: '',
   legendLine: ['同期对比'],
   xAxis: ['一月', '二月', '三月', '四月', '五月', '六月'],
   yAxis: [
@@ -21,8 +17,8 @@ var data = {
   lines: [
     [10, 10, 9, 11, 7, 4]
   ],
-  barColor: ['#3FA7DC', '#7091C4', '#5170A2'], 
-  lineColor: ['#D9523F'], 
+  barColor: ['#3FA7DC', '#7091C4', '#5170A2'],
+  lineColor: ['#D9523F'],
 };
 
 function test() {
@@ -85,7 +81,7 @@ function test() {
       },
       label: {
         normal: {
-          show: false, 
+          show: false,
           position: 'top',
         }
       },
@@ -101,7 +97,7 @@ function test() {
 }
 
 
-const  myData  = test()
+const myData = test()
 
 console.log(myData.legendArr)
 

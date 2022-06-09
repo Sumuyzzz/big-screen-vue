@@ -5,7 +5,7 @@
       <Unit title="光线" text="250LX"></Unit>
     </div>
     <div class="pngs-bottom pngs">
-      <Unit title="温度" text="23"></Unit>
+      <Unit title="湿度" text="23"></Unit>
       <Unit title="信号" text="-90dBm"></Unit>
     </div>
   </div>

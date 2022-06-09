@@ -1,7 +1,5 @@
 <template>
-  <div class="demo-progress">
     <v-chart :option="options" autoresize class='progress' />
-  </div>
 </template>
 
 <script setup >
@@ -127,11 +125,5 @@ const options = {
 
 <style scoped lang="scss">
 
-    .demo-progress {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      border: 1px solid red;
-      height: 100%;
-    }
+
 </style>
