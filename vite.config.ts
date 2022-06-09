@@ -18,6 +18,7 @@ export default defineConfig({
   }),
 
   ],
+  base:'big-screen-vue',
   optimizeDeps: {
     exclude: ["oh-vue-icons/icons"]
   },
@@ -29,5 +30,6 @@ export default defineConfig({
         exclude: [/node_modules/, /\/src\/assets\//, /index.html/],
       })]
     }
-  }
+  },
+
 })
