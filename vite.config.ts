@@ -16,6 +16,7 @@ export default defineConfig({
   Components({
     resolvers: [ElementPlusResolver()],
   }),
+
   ],
   optimizeDeps: {
     exclude: ["oh-vue-icons/icons"]
