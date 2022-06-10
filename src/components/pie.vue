@@ -1,14 +1,39 @@
 <template>
-
-  <v-chart autoresize :option="option" :update-options="{ notMerge: true }" />
-
+  <v-chart autoresize :option="option" :update-options="{ notMerge: true }" :init-options="initOption" />
+  <button @click="update"></button>
 </template>
-
 <script setup >
+
+
+
+
+
+import { onUpdated } from "vue";
 import VChart from "vue-echarts";
 
 
-const option = {
+
+
+
+let initData = [{
+  value: 1,
+  name: '故障',
+  label: {
+    color: '#e72325'
+  }
+},
+{
+  value: 2,
+  name: '正常',
+  selected: true,
+  label: {
+    color: '#98e002'
+  }
+}]
+
+
+
+let option = {
   title: {
     text: '本月设备状态统计',
     top: 35,
@@ -44,25 +69,42 @@ const option = {
         color: '#fff'
       },
     },
-    data: [
-      {
-        value: 2,
-        name: '故障',
-        label: {
-          color: '#e72325'
-        }
-      },
-      {
-        value: 48 ,
-        name: '正常',
-        selected: true,
-        label: {
-          color: '#98e002'
-        }
-      }
-    ]
+    data: initData
   }]
 }
+
+
+let update = () => { }
+
+onUpdated(() => {
+  update = () => {
+    initData = [{
+      value: 59,
+      name: '故障',
+      label: {
+        color: '#e72325'
+      }
+    },
+    {
+      value: 69,
+      name: '正常',
+      selected: true,
+      label: {
+        color: '#98e002'
+      }
+    }]
+    console.log(initData);
+  }
+})
+
+
+
+
+
+
+
+
+
 
 
 

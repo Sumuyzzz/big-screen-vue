@@ -6,7 +6,7 @@
 import VChart from "vue-echarts";
 
 
-const getDate = () => {
+const randomArray = () => {
   let result = []
   for (let i = 0;i < 6;i++) {
     result.push(Math.floor(Math.random() * 20))
@@ -16,14 +16,19 @@ const getDate = () => {
 
 
 
+var yAxis = [];
+var xAxis = [];
 
 
 
-var yAxis = [getDate(), getDate()];
-var xAxis = [getDate(), getDate()];
+for (let i = 0;i < 2;i++){
+  yAxis.push(randomArray())
+  xAxis.push(randomArray())
+}
+
+
 
 function test() {
-
   var legendBar = ['正面占比', '中立占比', '负面占比'];
   var legendLine = ['同期对比', '后期对比'];
   var seriesArr = [];
@@ -168,7 +173,6 @@ const options = {
       },
       color: '#1AA1FD',
     },
-
   },
   yAxis: {
     axisLine: {

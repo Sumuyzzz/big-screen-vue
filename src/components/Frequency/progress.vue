@@ -1,12 +1,22 @@
 <template>
-    <v-chart :option="options" autoresize class='progress' />
+  <v-chart :option="options" autoresize class='progress' />
 </template>
 
 <script setup >
 import VChart from "vue-echarts";
-const data = [70, 34, 60, 78, 69];
+
+const data = [];
+const randomArray = () => {
+  for (let i = 0;i < 5;i++) {
+    data.push(Math.floor(Math.random() * 100))
+  }
+}
+
+randomArray()
+
+
 const titleName = ['1号机', '2号机', '3号机', '4号机', '5号机'];
-const valueData = [702, 406, 664, 793, 505];
+
 const myColor = ['#1089E7', '#F57474', '#56D0E3', '#F8B448', '#8B78F6'];
 const options = {
   title: {
@@ -18,7 +28,6 @@ const options = {
     left: '6%',
     top: '10%'
   },
-  //图标位置
   grid: {
     top: '20%',
     left: '32%'
@@ -43,7 +52,6 @@ const options = {
       color: '#fff',
       formatter: (value, index) => {
         return [
-
           `{lg|${index + 1}}  ` + '{title|' + value + '} '
         ].join('\n')
       },
@@ -58,12 +66,10 @@ const options = {
         },
       }
     },
-
-
   }, {
     show: true,
     inverse: true,
-    data: valueData,
+    data: [1,2,2,3,5],
     axisLabel: {
       textStyle: {
         fontSize: 12,
@@ -124,6 +130,4 @@ const options = {
 </script>
 
 <style scoped lang="scss">
-
-
 </style>
