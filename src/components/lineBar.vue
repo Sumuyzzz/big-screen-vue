@@ -8,8 +8,7 @@ import VChart from "vue-echarts";
 
 const getDate = () => {
   let result = []
-
-  for (let i = 0;i < 6;i++){
+  for (let i = 0;i < 6;i++) {
     result.push(Math.floor(Math.random() * 20))
   }
   return result
@@ -29,7 +28,7 @@ function test() {
   var legendLine = ['同期对比', '后期对比'];
   var seriesArr = [];
   var legendArr = [];
-  var barColor = ['#bfc',  '#7091C4']
+  var barColor = ['#bfc', '#7091C4']
   var lineColor = ['#3FA7DC', '#d9523f']
   yAxis?.forEach((item, index) => {
     legendArr.push({
@@ -197,10 +196,6 @@ const options = {
   series: myData.seriesArr
 }
 
-setInterval(() => {
-  yAxis.push(getDate())
-  xAxis.push(getDate())
-}, 1000);
 </script>
 
 <style lang="scss" scoped>
