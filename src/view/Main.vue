@@ -4,10 +4,10 @@
       <Order />
     </Charts>
 
-      <Charts class="maps">
-        <map-title />
-        <Map class="map"/>
-      </Charts>
+    <Charts class="maps">
+      <map-title />
+      <Maps class="map" />
+    </Charts>
 
     <Charts class="box">
       <Frequency />
@@ -35,9 +35,10 @@
     justify-content: center;
     position: relative;
   }
-.order{
-  width: 330px;
-}
+
+  .order {
+    width: 330px;
+  }
 
   .maps {
 
@@ -48,8 +49,8 @@
 
     .map {
       flex: 2;
-      padding:30px;
-      width:90%;
+      padding: 30px;
+      width: 90%;
     }
   }
 }

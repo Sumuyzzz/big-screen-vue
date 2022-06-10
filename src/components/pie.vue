@@ -1,13 +1,14 @@
 <template>
 
-    <v-chart :option="options" autoresize />
+  <v-chart autoresize :option="option" :update-options="{ notMerge: true }" />
 
 </template>
 
-<script setup lang="ts">
+<script setup >
 import VChart from "vue-echarts";
 
-const options = {
+
+const option = {
   title: {
     text: '本月设备状态统计',
     top: 35,
@@ -20,7 +21,6 @@ const options = {
   tooltip: {
     trigger: 'item',
     formatter: "{a} <br/>{b}: {c} ({d}%)",
-
   },
   legend: {
     right: 20,
@@ -44,31 +44,32 @@ const options = {
         color: '#fff'
       },
     },
-    data: [{
-      value: 6,
-      name: '故障',
-      label: {
-        color:'#e72325'
+    data: [
+      {
+        value: 2,
+        name: '故障',
+        label: {
+          color: '#e72325'
+        }
+      },
+      {
+        value: 48 ,
+        name: '正常',
+        selected: true,
+        label: {
+          color: '#98e002'
+        }
       }
-    },
-    {
-      value: 50,
-      name: '正常',
-      selected: true,
-      label: {
-        color:'#98e002'
-      }
-    }
     ]
   }]
 }
 
 
 
+
+
+
 </script>
 
 <style lang="scss" scoped>
-
-
-
 </style>

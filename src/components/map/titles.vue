@@ -1,15 +1,15 @@
 <template>
   <div class="little-box">
-    <div class="key">{{ text }}</div>
-    <div class="value">{{ value }}</div>
+    <div class="key">{{ title_text }}</div>
+    <div class="value">{{ title_value }}</div>
   </div>
 </template>
 
 <script setup lang="ts">
 defineProps<
   {
-    text: string,
-    value: string
+    title_text: string,
+    title_value: string
   }>()
 
 

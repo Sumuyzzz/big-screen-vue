@@ -4,9 +4,11 @@
       <div class="left">
         {{ "开关次数" }}
       </div>
-      <img src="../../assets/switch.png" alt="" class="switch">
+        <img src="../../assets/switch.png" alt="" class="switch" @click="count++">
+
+
       <div class="right">
-        <div class="number"> {{ "15" }}</div>
+        <div class="number"> {{ count }}</div>
         <div class="string">{{ "次" }}</div>
       </div>
     </div>
@@ -18,10 +20,16 @@
 </template>
 
 <script setup>
+import { ref } from "vue"
+
+const count = ref(0)
+
+
 
 </script>
 
 <style lang="scss" scoped>
+
 .switches {
   height: 100%;
   display: flex;
@@ -37,6 +45,7 @@
 
     .switch {
       width: 10%;
+      cursor:pointer
     }
 
     .left {
